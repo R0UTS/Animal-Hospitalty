@@ -1,0 +1,118 @@
+/* SystemConfiguration.css */
+
+.system-configuration-container {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.system-configuration-container h2 {
+    color: #333;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    font-size: 2.2em;
+}
+
+.system-configuration-container section {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.system-configuration-container section h3 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.setting-item {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 15px;
+    align-items: center;
+}
+
+.setting-item label {
+    color: #555;
+    font-weight: bold;
+}
+
+.setting-item input[type="text"],
+.setting-item select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f7f7f7;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.setting-item input[type="text"]:focus,
+.setting-item select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.system-configuration-container section ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.system-configuration-container section ul li {
+    padding: 10px 15px;
+    background-color: #f7f7f7;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    border: 1px solid #eee;
+    color: #333;
+}
+
+.system-configuration-container .add-new {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.system-configuration-container .add-new input[type="text"] {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f7f7f7;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.system-configuration-container .add-new input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.system-configuration-container .add-new button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.system-configuration-container .add-new button:hover {
+    background-color: #218838;
+}

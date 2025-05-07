@@ -1,0 +1,257 @@
+/* HomePage.css */
+
+.home-page {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Hero Section */
+.hero-section {
+    background-color: #f0f8ff; /* A light blue background */
+    padding: 60px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('721.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+
+  
+  .logo img {
+    max-width:200px; 
+    mix-blend-mode: darken;
+  }
+  
+  .hero-content {
+    flex: 1;
+    margin-right: 40px;
+    color: whitesmoke;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5em;
+    /* color: #333; */
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.2em;
+    /* color: #666; */
+    margin-bottom: 30px;
+  }
+  
+  .report-emergency-button a{
+    text-decoration: none;
+    color: #f0f8ff;
+  }
+.report-emergency-button {
+    background-color: #007bff; /* Blue button */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effect */
+}
+
+.report-emergency-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+
+
+  
+  .report-emergency-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .hero-image img {
+    max-width: 400px; /* Adjust image size as needed */
+    height: auto;
+  }
+  
+  /* Key Features Section */
+.key-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+
+  
+.feature {
+    width: 250px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Transition effect */
+}
+
+.feature:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+  
+  .feature img {
+    max-width: 100px; /* Adjust icon size */
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .feature h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .feature p {
+    color: #666;
+  }
+  
+  /* Our Story Section */
+.our-story {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #e9f5e9; /* A light green background */
+}
+
+
+  
+  .our-story-content {
+    flex: 1;
+    margin-right: 40px;
+  }
+  
+  .our-story-content h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .our-story-content p {
+    font-size: 1.2em;
+    color: #666;
+  }
+  
+  .our-story-image img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Certified Veterinarians Section */
+.certified-vets {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+
+  
+  .certified-vets h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 40px;
+  }
+  
+  .vets-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+.vet-profile {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Transition effect */
+}
+
+.vet-profile:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+  
+  .vet-profile img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .vet-profile h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .vet-profile p {
+    color: #666;
+  }
+  
+  /* Call to Action Section */
+.call-to-action {
+    background-color: #f0f8ff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+
+  
+  .call-to-action h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .contact-us-button {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .contact-us-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Footer Section */
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .contact-info {
+    margin-bottom: 10px;
+  }
+  
+.social-media {
+    margin-bottom: 10px;
+}
+
+
+  
+  .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+  }

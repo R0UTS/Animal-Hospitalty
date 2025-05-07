@@ -1,0 +1,93 @@
+/* General Styles */
+.my-reports-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Header Styles */
+.reports-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.reports-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+/* Report Table Styles */
+.reports-table {
+    margin-bottom: 30px;
+}
+
+.report-table-container {
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.report-table th,
+.report-table td {
+    padding: 12px 15px;
+    
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.report-table th {
+    background-color: #f2f2f2;
+}
+
+.report-table textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9em;
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Report Chart Styles */
+.reports-chart {
+    margin-bottom: 30px;
+}
+/* Status-based colors for report items */
+.report-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-pending {
+    background-color: #fff3cd; /* light yellow */
+}
+
+.status-acknowledged {
+    background-color: #cce5ff; /* light blue */
+}
+
+.status-en-route {
+    background-color: #b8daff; /* lighter blue */
+}
+
+.status-on-site {
+    background-color: #ffeeba; /* light orange */
+}
+
+.status-resolved {
+    background-color: #d4edda; /* light green */
+}
+
+.status-cancelled {
+    background-color: #f8d7da; /* light red */
+}

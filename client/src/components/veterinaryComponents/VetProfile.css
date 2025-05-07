@@ -1,0 +1,163 @@
+/* Profile Container */
+.vet-profile-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 30px 25px;
+  background-color: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+.vet-profile-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #1a2a40;
+}
+
+.vet-profile-data {
+  text-align: left;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #34495e;
+}
+
+.vet-profile-data p {
+  margin: 12px 0;
+  font-weight: 500;
+}
+
+.vet-profile-buttons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.vet-profile-buttons button {
+  padding: 10px 22px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #3498db;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vet-profile-buttons button:hover,
+.vet-profile-buttons button:focus {
+  background-color: #2980b9;
+  box-shadow: 0 6px 12px rgba(41, 128, 185, 0.5);
+  outline: none;
+}
+
+.vet-profile-form {
+  text-align: left;
+}
+
+.vet-profile-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.vet-profile-form input,
+.vet-profile-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vet-profile-form input:focus,
+.vet-profile-form textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+  outline: none;
+}
+
+.vet-profile-form button {
+  padding: 12px 26px;
+  font-size: 16px;
+  margin-right: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background-color: #27ae60;
+  box-shadow: 0 4px 8px rgba(39, 174, 96, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vet-profile-form button:hover,
+.vet-profile-form button:focus {
+  background-color: #219150;
+  box-shadow: 0 6px 12px rgba(33, 145, 80, 0.5);
+  outline: none;
+}
+
+.vet-profile-form .cancel-button {
+  background-color: #e74c3c;
+  box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+}
+
+.vet-profile-form .cancel-button:hover,
+.vet-profile-form .cancel-button:focus {
+  background-color: #c0392b;
+  box-shadow: 0 6px 12px rgba(192, 57, 43, 0.5);
+  outline: none;
+}
+
+.success-message {
+  color: #27ae60;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 1.1em;
+  text-align: center;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.error-message {
+  color: #e74c3c;
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 1.1em;
+  text-align: center;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .vet-profile-container {
+    padding: 20px 15px;
+  }
+
+  .vet-profile-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .vet-profile-buttons button {
+    width: 100%;
+    justify-content: center;
+  }
+}

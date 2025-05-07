@@ -1,0 +1,104 @@
+/* FarmerDashboard.css */
+
+.farmer-dashboard-container {
+    display: grid;
+    min-height: 100vh; /* Full viewport height */
+    font-family: sans-serif;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer"
+}
+
+/* Header */
+.farmer-dashboard-header {
+    background-color: #4CAF50; /* A green header */
+    color: white;
+    padding: 10px 20px;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.farmer-dashboard-header .logo img {
+    max-height: 50px; /* Adjust logo size */
+}
+
+.farmer-dashboard-header .farmer-profile {
+    display: flex;
+    align-items: center;
+}
+
+.farmer-dashboard-header .farmer-profile span {
+    margin-right: 20px;
+}
+
+.farmer-dashboard-header .farmer-profile button {
+    background-color: white;
+    color: #4CAF50;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.farmer-dashboard-header .farmer-profile button:hover {
+    background-color: #f0f8ff; /* Lighter background on hover */
+}
+
+/* Sidebar/Navigation */
+.farmer-dashboard-sidebar {
+    background-color: #f8f8f8; /* Light gray sidebar */
+    padding: 10px;
+    width: 280px; /* Adjust sidebar width */
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+    grid-area: sidebar;
+    
+}
+
+.farmer-dashboard-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.farmer-dashboard-sidebar li {
+    padding: 10px;
+    margin-right: 50px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s ease;
+   
+}
+
+.farmer-dashboard-sidebar li:hover {
+    background-color: #e0e0e0; /* Slightly darker gray on hover */
+}
+
+.farmer-dashboard-sidebar li.active {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+/* Main Content Area */
+.farmer-dashboard-main-content {
+     /* Occupy remaining space */
+    padding: 20px;
+    grid-area: main;
+    background-color:#f0f8ff; /* White main content */
+}
+
+/* Footer */
+.farmer-dashboard-footer {
+    background-color: #333; /* Dark gray footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    grid-area: footer;
+}

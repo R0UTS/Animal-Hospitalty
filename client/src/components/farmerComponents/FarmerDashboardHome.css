@@ -1,0 +1,100 @@
+/* FarmerDashboardHome.css */
+
+.farmer-dashboard-home {
+    padding: 20px;
+}
+
+.dashboard-main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Emergency Report Shortcut */
+.emergency-report-shortcut {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.report-emergency-button {
+    background-color: #f44336; /* Red button */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.report-emergency-button:hover {
+    background-color: #d32f2f;
+}
+
+.report-emergency-button i {
+    margin-right: 10px;
+}
+
+/* Recent Reports Table */
+.recent-reports {
+    margin-bottom: 30px;
+}
+
+.report-table-container {
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.report-table th,
+.report-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.report-table th {
+    background-color: #f2f2f2;
+}
+
+/* Animal Profiles */
+.animal-profiles {
+    margin-bottom: 30px;
+}
+
+.animal-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.animal-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+}
+
+.animal-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.animal-card h3 {
+    margin-top: 0;
+}
+
+.animal-card a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Add more styles as needed for report summaries, etc. */

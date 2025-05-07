@@ -1,0 +1,65 @@
+/* Communication Interface Styles */
+.communication-interface {
+    flex: 1; /* Take up available space */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.communication-interface h2 {
+    margin-top: 0;
+}
+
+.message-list {
+    height: 200px; /* Adjust as needed */
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.message {
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.message.farmer {
+    background-color: #e0f7fa;
+    text-align: left;
+}
+
+.message.vet {
+    background-color: #e8f5e9;
+    text-align: right;
+}
+
+.message-input {
+    display: flex;
+}
+
+.message-input textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    resize: vertical;
+}
+
+.message-input button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-left: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.message-input button:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,78 @@
+Dashboard.css
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+  }
+  
+  /* Header */
+  .dashboard-header {
+    background-color: #007bff; /* Blue header */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dashboard-header .logo img {
+    max-height: 50px; /* Adjust logo size */
+  }
+  
+  .dashboard-header .user-profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dashboard-header .user-profile span {
+    margin-right: 20px;
+  }
+  
+  .dashboard-header .user-profile button {
+    background-color: white;
+    color: #007bff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Sidebar/Navigation */
+  .dashboard-sidebar {
+    background-color: #f0f8ff; /* Light blue sidebar */
+    padding: 20px;
+    width: 250px; /* Adjust sidebar width */
+  }
+  
+  .dashboard-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dashboard-sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .dashboard-sidebar li.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* Main Content Area */
+  .dashboard-main-content {
+    flex: 1; /* Occupy remaining space */
+    padding: 20px;
+    background-color: #fff; /* White main content */
+  }
+  
+  /* Footer */
+  .dashboard-footer {
+    background-color: #333; /* Dark gray footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }

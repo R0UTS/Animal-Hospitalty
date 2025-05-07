@@ -1,0 +1,42 @@
+/* Navbar.css */
+
+.navbar {
+    background-color: #f8f8f8; /* Light gray background */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    display: flex;
+    justify-content: space-between; /* Distributes logo and links */
+    align-items: center; /* Vertically centers items */
+}
+
+.navbar-logo img {
+    max-height: 50px; /* Adjust logo size as needed */
+}
+
+.navbar-links {
+    list-style: none; /* Remove bullet points from the list */
+    display: flex; /* Arrange links horizontally */
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    margin-left: 20px; /* Spacing between links */
+}
+
+.navbar-links li:first-child {
+    margin-left: 0; /* No margin on the first link */
+}
+
+.navbar-links a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #333; /* Dark gray link color */
+    font-weight: bold;
+    padding: 5px 10px; /* Add some padding for better click area */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.navbar-links a:hover {
+    color: #007bff; /* Change color on hover (e.g., to blue) */
+}

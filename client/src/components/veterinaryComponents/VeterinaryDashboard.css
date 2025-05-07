@@ -1,0 +1,198 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.vet-dashboard-container {
+    display: grid;
+    flex-direction: column;
+    min-height: 100vh;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer"
+}
+
+/* Header Styles */
+.vet-dashboard-header {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 30px;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    max-height: 50px;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: rotate(10deg);
+}
+
+.welcome-message {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.notification-icon {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.notification-icon:hover {
+    transform: scale(1.1);
+}
+
+.notification-icon i {
+    font-size: 1.8em;
+    color: white;
+    text-shadow: 0 0 5px rgba(255,255,255,0.7);
+}
+
+.notification-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff4757;
+    color: white;
+    border-radius: 50%;
+    padding: 6px 10px;
+    font-size: 0.75em;
+    font-weight: 700;
+    box-shadow: 0 0 8px #ff4757;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 8px #ff4757;
+    }
+    50% {
+        box-shadow: 0 0 20px #ff6b81;
+    }
+    100% {
+        box-shadow: 0 0 8px #ff4757;
+    }
+}
+
+.logout-button {
+    background: #ff6b81;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(255, 107, 129, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logout-button:hover {
+    background: #ff4757;
+    box-shadow: 0 6px 16px rgba(255, 71, 87, 0.7);
+}
+
+/* Sidebar Styles */
+.vet-dashboard-sidebar {
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    width: 200px;
+    padding: 30px 20px;
+    box-shadow: 4px 0 12px rgba(102, 126, 234, 0.4);
+    position: sticky;
+    top: 70px; /* height of header */
+    height: calc(100vh - 70px);
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 20px 20px 0;
+}
+
+.vet-dashboard-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.vet-dashboard-sidebar nav ul li {
+    margin-bottom: 20px;
+}
+
+.vet-dashboard-sidebar nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.vet-dashboard-sidebar nav ul li a:hover,
+.vet-dashboard-sidebar nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(10px);
+    box-shadow: 0 4px 12px rgba(255,255,255,0.3);
+}
+
+/* Main Content Styles */
+.vet-dashboard-main-content {
+    flex: 1;
+    padding: 20px 30px 30px 30px;
+    grid-area: main;
+    display: flex;
+    gap: 30px;
+    background: white;
+    border-radius: 20px;
+    margin-left: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    min-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+
+/* Scrollbar Styling */
+.vet-dashboard-main-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.vet-dashboard-main-content::-webkit-scrollbar-thumb {
+    background-color: #667eea;
+    border-radius: 4px;
+}
+
+.vet-dashboard-main-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
