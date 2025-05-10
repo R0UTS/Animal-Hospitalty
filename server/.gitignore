@@ -120,6 +120,7 @@ dist
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Node
 .DS_Store
 node_modules
+uploads
 
 *.env
 .env

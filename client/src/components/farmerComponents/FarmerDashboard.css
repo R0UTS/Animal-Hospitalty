@@ -1,104 +1,173 @@
-/* FarmerDashboard.css */
+/* Upgraded FarmerDashboard.css with modern styles and responsiveness */
 
 .farmer-dashboard-container {
     display: grid;
-    min-height: 100vh; /* Full viewport height */
-    font-family: sans-serif;
-    grid-template-columns: 200px 1fr;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    grid-template-columns: 250px 1fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
         "header header"
         "sidebar main"
-        "footer footer"
+        "footer footer";
+    background-color: #f9fafb;
+    color: #333;
 }
 
 /* Header */
 .farmer-dashboard-header {
-    background-color: #4CAF50; /* A green header */
+    background: linear-gradient(90deg, #4caf50 0%, #388e3c 100%);
     color: white;
-    padding: 10px 20px;
+    padding: 15px 30px;
     grid-area: header;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    position: sticky;
+    top: 0;
+    z-index: 1100;
 }
 
 .farmer-dashboard-header .logo img {
-    max-height: 50px; /* Adjust logo size */
+    max-height: 60px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.farmer-dashboard-header .logo img:hover {
+    transform: scale(1.1);
 }
 
 .farmer-dashboard-header .farmer-profile {
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
 .farmer-dashboard-header .farmer-profile span {
-    margin-right: 20px;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .farmer-dashboard-header .farmer-profile button {
     background-color: white;
-    color: #4CAF50;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
+    color: #4caf50;
+    border: 2px solid #4caf50;
+    padding: 8px 16px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(76, 175, 80, 0.4);
 }
 
 .farmer-dashboard-header .farmer-profile button:hover {
-    background-color: #f0f8ff; /* Lighter background on hover */
+    background-color: #388e3c;
+    color: white;
+    border-color: #388e3c;
+    box-shadow: 0 4px 10px rgba(56, 142, 60, 0.6);
 }
 
 /* Sidebar/Navigation */
 .farmer-dashboard-sidebar {
-    background-color: #f8f8f8; /* Light gray sidebar */
-    padding: 10px;
-    width: 280px; /* Adjust sidebar width */
-    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+    padding: 20px 15px;
+    width: 250px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
     grid-area: sidebar;
-    
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 10px 10px 0;
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 120px);
+    overflow-y: auto;
 }
 
 .farmer-dashboard-sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .farmer-dashboard-sidebar li {
-    padding: 10px;
-    margin-right: 50px;
+    padding: 12px 20px;
     cursor: pointer;
-    border-bottom: 1px solid #ddd;
-    transition: background-color 0.2s ease;
-   
+    border-radius: 8px;
+    font-weight: 600;
+    color: #555;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    user-select: none;
+    box-shadow: inset 0 0 0 0 transparent;
 }
 
 .farmer-dashboard-sidebar li:hover {
-    background-color: #e0e0e0; /* Slightly darker gray on hover */
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    box-shadow: inset 5px 0 0 0 #4caf50;
 }
 
 .farmer-dashboard-sidebar li.active {
-    background-color: #4CAF50;
+    background-color: #4caf50;
     color: white;
-    font-weight: bold;
+    font-weight: 700;
+    box-shadow: inset 5px 0 0 0 #2e7d32;
 }
 
 /* Main Content Area */
 .farmer-dashboard-main-content {
-     /* Occupy remaining space */
-    padding: 20px;
+    padding: 30px 40px;
     grid-area: main;
-    background-color:#f0f8ff; /* White main content */
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    min-height: 80vh;
+    transition: background-color 0.3s ease;
 }
 
 /* Footer */
 .farmer-dashboard-footer {
-    background-color: #333; /* Dark gray footer */
+    background-color: #2e7d32;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px 20px;
     grid-area: footer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 0 0 10px 10px;
+    z-index: 10;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .farmer-dashboard-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
+
+    .farmer-dashboard-sidebar {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 15px 10px;
+    }
+
+    .farmer-dashboard-main-content {
+        padding: 20px 15px;
+        border-radius: 0;
+        min-height: auto;
+    }
 }

@@ -7,6 +7,10 @@
     display: flex;
     justify-content: space-between; /* Distributes logo and links */
     align-items: center; /* Vertically centers items */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: saturate(180%) blur(20px);
 }
 
 .navbar-logo img {

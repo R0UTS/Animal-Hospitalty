@@ -129,7 +129,7 @@ body {
     box-shadow: 4px 0 12px rgba(102, 126, 234, 0.4);
     position: sticky;
     top: 70px; /* height of header */
-    height: calc(100vh - 70px);
+    height: 80vh;
     grid-area: sidebar;
     display: flex;
     flex-direction: column;
@@ -165,6 +165,9 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
     transform: translateX(10px);
     box-shadow: 0 4px 12px rgba(255,255,255,0.3);
+    border-left: 5px solid #4caf50; /* Added green left border */
+    padding-left: 15px; /* Adjust padding to accommodate border */
+    transition: background-color 0.3s ease, transform 0.2s ease, border-left 0.3s ease;
 }
 
 /* Main Content Styles */

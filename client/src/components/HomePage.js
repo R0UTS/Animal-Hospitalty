@@ -22,9 +22,9 @@ function HomePage() {
           <img src={logo} alt="Animal Hospitality Logo" />
         </div>
         <div className="hero-content">
-          <h1>Quickly Connect with Vets in Animal Emergencies</h1>
+          <h1 className='headingq'>Quickly Connect with Vets in Animal Emergencies</h1>
           <p>Animal Hospitality provides a platform for livestock owners to report health concerns and connect with qualified veterinarians for timely help.</p>
-      <button className="report-emergency-button"><Link to="/login">Report an Emergency</Link></button>
+      <Link to="/login"><button className="report-emergency-button">Report an Emergency</button></Link>
 
 
 
@@ -114,7 +114,7 @@ function HomePage() {
 
 
         <h2>Get Immediate Veterinary Assistance</h2>
-        <Link to="tel:+91-8763959919"><button className="contact-us-button">Contact Us for More Information</button></Link>
+        <Link to="tel:+91-155333"><button className="contact-us-button">Contact Us for More Information</button></Link>
       </section>
 
       {/* Footer Section */}

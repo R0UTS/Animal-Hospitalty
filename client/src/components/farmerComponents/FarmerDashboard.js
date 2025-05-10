@@ -67,7 +67,7 @@ function FarmerDashboard() {
   return (
     <div className="farmer-dashboard-container">
       <header className="farmer-dashboard-header">
-        <div className="logo"><img src={'../animal-hospitality-logo.png'} alt="Animal Hospitality Logo" className="logo" /></div>
+        <img src={'../animal-hospitality-logo.png'} alt="Animal Hospitality Logo" className="logo" />
         <div className="farmer-profile">
           <span>{farmerName}</span>
           <button onClick={handleLogout} className="logout-button">Logout</button>

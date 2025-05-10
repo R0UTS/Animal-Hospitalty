@@ -111,20 +111,20 @@ router.get('/statistics', authenticateToken, async (req, res) => {
   try {
     const locationFilter = req.query.location;
     const matchStage = locationFilter && locationFilter.toLowerCase() !== 'all'
-      ? { location: { $regex: new RegExp(`^${locationFilter}$`, 'i') } }
+      ? { farmerLocation: { $regex: new RegExp(`^${locationFilter}$`, 'i') } }
       : {};
 
     const aggregation = await Emergency.aggregate([
       { $match: matchStage },
       {
         $group: {
-          _id: { location: '$location', status: '$status' },
+          _id: { farmerLocation: '$farmerLocation', status: '$status' },
           count: { $sum: 1 }
         }
       },
       {
         $group: {
-          _id: '$_id.location',
+          _id: '$_id.farmerLocation',
           countsByStatus: {
             $push: {
               status: '$_id.status',
@@ -155,7 +155,7 @@ router.get('/statistics/monthly', authenticateToken, async (req, res) => {
   try {
     const locationFilter = req.query.location;
     const matchStage = locationFilter && locationFilter.toLowerCase() !== 'all'
-      ? { location: { $regex: new RegExp(`^${locationFilter}$`, 'i') } }
+      ? { farmerLocation: { $regex: new RegExp(`^${locationFilter}$`, 'i') } }
       : {};
 
     const aggregation = await Emergency.aggregate([
@@ -251,46 +251,6 @@ router.get('/vet-emergencies', authenticateToken, async (req, res) => {
   }
 });
 
-router.get('/:emergencyId', authenticateToken, async (req, res) => {
-  try {
-    const emergencyId = req.params.emergencyId;
-    const emergency = await Emergency.findOne({ emergencyId }).lean();
-    if (!emergency) {
-      return res.status(404).json({ error: 'Emergency not found' });
-    }
-    res.json(emergency);
-  } catch (error) {
-    console.error('Error fetching emergency details:', error);
-    res.status(500).json({ error: 'Failed to fetch emergency details' });
-  }
-});
-
-router.patch('/:emergencyId/status', authenticateToken, async (req, res) => {
-  try {
-    const emergencyId = req.params.emergencyId;
-    const { status } = req.body;
-    if (!status) {
-      return res.status(400).json({ error: 'Status is required' });
-    }
-    const allowedStatuses = ['pending', 'acknowledge', 'cancelled', 'en route', 'on site', 'resolved'];
-    if (!allowedStatuses.includes(status.toLowerCase())) {
-      return res.status(400).json({ error: `Invalid status. Allowed statuses are: ${allowedStatuses.join(', ')}` });
-    }
-    const updatedEmergency = await Emergency.findOneAndUpdate(
-      { emergencyId },
-      { status },
-      { new: true }
-    ).lean();
-    if (!updatedEmergency) {
-      return res.status(404).json({ error: 'Emergency not found' });
-    }
-    res.json(updatedEmergency);
-  } catch (error) {
-    console.error('Error updating emergency status:', error);
-    res.status(500).json({ error: 'Failed to update emergency status' });
-  }
-});
-
 // GET /detailed
 // Returns filtered emergency reports for admin reporting panel
 router.get('/detailed', authenticateToken, async (req, res) => {
@@ -330,6 +290,48 @@ router.get('/detailed', authenticateToken, async (req, res) => {
   } catch (error) {
     console.error('Error fetching detailed emergency reports:', error);
     res.status(500).json({ error: 'Failed to fetch detailed emergency reports' });
+  }
+});
+
+// GET /:emergencyId
+// Returns emergency report details by emergencyId
+router.get('/:emergencyId', authenticateToken, async (req, res) => {
+  try {
+    const emergencyId = req.params.emergencyId;
+    const emergency = await Emergency.findOne({ emergencyId }).lean();
+    if (!emergency) {
+      return res.status(404).json({ error: 'Emergency not found' });
+    }
+    res.json(emergency);
+  } catch (error) {
+    console.error('Error fetching emergency details:', error);
+    res.status(500).json({ error: 'Failed to fetch emergency details' });
+  }
+});
+
+router.patch('/:emergencyId/status', authenticateToken, async (req, res) => {
+  try {
+    const emergencyId = req.params.emergencyId;
+    const { status } = req.body;
+    if (!status) {
+      return res.status(400).json({ error: 'Status is required' });
+    }
+    const allowedStatuses = ['pending', 'acknowledge', 'cancelled', 'en route', 'on site', 'resolved'];
+    if (!allowedStatuses.includes(status.toLowerCase())) {
+      return res.status(400).json({ error: `Invalid status. Allowed statuses are: ${allowedStatuses.join(', ')}` });
+    }
+    const updatedEmergency = await Emergency.findOneAndUpdate(
+      { emergencyId },
+      { status },
+      { new: true }
+    ).lean();
+    if (!updatedEmergency) {
+      return res.status(404).json({ error: 'Emergency not found' });
+    }
+    res.json(updatedEmergency);
+  } catch (error) {
+    console.error('Error updating emergency status:', error);
+    res.status(500).json({ error: 'Failed to update emergency status' });
   }
 });
 
